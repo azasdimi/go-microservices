@@ -24,3 +24,12 @@ Stop the frontend app
 Stop docker compose
 
 `make down`
+
+If PostgresSQL is not starting and shows address :5432 is already in use,
+then
+
+`sudo lsof -i :5432 `
+
+Get the PID of the process and kill it
+
+`sudo kill -9 <pid>`
